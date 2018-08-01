@@ -1,0 +1,51 @@
+<div class="index" align="center">
+
+    <h1>{{ title }}</h1>
+    <el-table v-loading="loading" :data="results" style="width: 60%">
+        <el-table-column label="Post ID">
+            <template slot-scope="scope">
+                <input type="checkbox" v-on:change="deleteSelect" :value="scope.row.id" />
+                <span style="margin-left: 10px">{{ scope.row.id }}</span>
+            </template>
+        </el-table-column>
+        <el-table-column label="Post Title">
+            <template slot-scope="scope">
+                <span style="margin-left: 10px">{{ scope.row.title }}</span>
+            </template>
+        </el-table-column>
+    </el-table>
+    <br/>
+    <el-table v-loading="loading" :data="files.contents" style="width: 60%">
+        <el-table-column label="File Name(s)">
+            <template slot-scope="scope">
+                <div class="pointer">
+                    <i v-if="scope.row.hasOwnProperty('Key')" class="el-icon-document"></i>
+                    <span v-if="scope.row.hasOwnProperty('Key')" style="margin-left: 10px" @click="downloadFile(scope.row.Key)">{{ scope.row.Key }}</span>
+                    <a v-on:click.prevent="moveToDir(scope.row.Prefix)" v-if="scope.row.hasOwnProperty('Prefix')" style="margin-left: 10px">{{ scope.row.Prefix }}</a>
+                </div>
+            </template>
+        </el-table-column>
+        <el-table-column label="Size">
+            <template slot-scope="scope">
+                <span style="margin-left: 10px">{{ scope.row.Size || '--' }}</span>
+            </template>
+        </el-table-column>
+        <el-table-column label="Last Modified">
+            <template slot-scope="scope">
+                <i v-if="scope.row.LastModified" class="el-icon-time"></i>
+                <span style="margin-left: 10px">{{ scope.row.LastModified || '--' }}</span>
+            </template>
+        </el-table-column>
+        <el-table-column label="Operations">
+            <template slot-scope="scope">
+                <el-button size="mini" type="danger" @click="deleteFile(scope.row.Key)">Delete</el-button>
+            </template>
+        </el-table-column>
+        <el-table-column v-if="true==false">
+            <template slot-scope="scope">
+                <span style="margin-left: 10px">{{ scope.row.ETag }}</span>
+            </template>
+        </el-table-column>
+    </el-table>
+
+</div>

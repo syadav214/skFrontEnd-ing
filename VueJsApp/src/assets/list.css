@@ -1,0 +1,22 @@
+h1, h2 {
+  font-weight: normal;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+.customTb {
+  width: 60%;
+  margin: 0px auto;
+  text-align:left;
+}
+.hideEl {
+    display: none;
+}
