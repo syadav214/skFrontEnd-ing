@@ -8,7 +8,6 @@ import CreatePosts from './components/create-posts.js';
 import Profile from './components/profile';
 import Comments from './components/comments';
 import NoMatch from './components/nomatch';
-import Menu from './components/menu';
 
 //css files
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -22,7 +21,6 @@ ReactDOM.render(
       <Route path="/posts" component={CreatePosts} />
       <Route path="/profile" component={Profile} />
       <Route path="/comments/:id" component={Comments} />
-      <Route path="/logout" component={Menu} />
       <Route component={NoMatch} />
     </Switch>
   </BrowserRouter>,
