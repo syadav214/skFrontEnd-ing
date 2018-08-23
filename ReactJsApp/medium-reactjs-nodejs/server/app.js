@@ -16,7 +16,7 @@ const url = process.env.MONGODB_URI || 'mongodb://localhost:27017/medium';
 try {
   mongoose.connect(
     url,
-    { useNewUrlParser: true }
+    { useNewUrlParser: true } //used for mongo >= 4.0
   );
 } catch (error) {}
 
@@ -32,7 +32,7 @@ app.use(helmet());
 //app.use('/static',express.static(path.join(__dirname,'static')))
 
 // to use with a prefix
-app.use('/api', router);
+// app.use('/api', router);
 app.use(router);
 
 /** start server */

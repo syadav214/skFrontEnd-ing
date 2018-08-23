@@ -9,7 +9,7 @@ module.exports = {
     function saveArticle(obj) {
       new Article(obj).save((err, article) => {
         if (err) res.send(err);
-        else if (!article) res.send(400);
+        else if (!article) res.sendStatus(400);
         else {
           return article.addAuthor(req.body.author_id).then(_article => {
             return res.send(_article);
@@ -25,7 +25,7 @@ module.exports = {
       .populate('comments.author')
       .exec((err, article) => {
         if (err) res.send(err);
-        else if (!article) res.send(404);
+        else if (!article) res.sendStatus(404);
         else res.send(article);
         next();
       });
@@ -68,7 +68,7 @@ module.exports = {
       .populate('comments.author')
       .exec((err, article) => {
         if (err) res.send(err);
-        else if (!article) res.send(404);
+        else if (!article) res.sendStatus(404);
         else res.send(article);
         next();
       });
