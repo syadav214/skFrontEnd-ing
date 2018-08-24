@@ -16,3 +16,8 @@
     # install below pacakges for react app
     $ npm i axios history prop-types react-google-login react-redux react-router react-router-dom react-router-redux react-scripts redux redux-devtools-extension redux-logger redux-thunk --save
 ```
+
+### Ref
+
+1. https://codeburst.io/build-simple-medium-com-on-node-js-and-react-js-a278c5192f47
+2. https://github.com/krissnawat/medium-clone-on-node
