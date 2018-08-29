@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Canvas</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #myCanvas {
+            background: #eee;
+            display: block;
+            margin: 0 auto;
+            width: 480;
+            height: 320;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas">
+
+    </canvas>
+
+    <script>
+        let canvas = document.getElementById('myCanvas');
+        let ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.arc(150, 100, 10, 0, Math.PI * 2);
+        ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.rect(20, 40, 50, 50);
+        ctx.fillStyle = "#FF0000";
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.rect(160, 10, 100, 40);
+        ctx.strokeStyle = "red";
+        ctx.stroke();
+        ctx.closePath();
+
+    </script>
+</body>
+
+</html>
