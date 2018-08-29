@@ -5,8 +5,6 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
-const dotenv = require('dotenv');
-dotenv.config();
 
 const app = express();
 const router = express.Router();
@@ -16,11 +14,11 @@ const url = process.env.MONGODB_URI || 'mongodb://localhost:27017/medium';
 try {
   mongoose.connect(
     url,
-    { useNewUrlParser: true } //used for mongo >= 4.0
+    { useNewUrlParser: true }
   );
 } catch (error) {}
 
-let port = process.env.PORT;
+let port = 5000 || process.env.PORT;
 
 /** set up routes {API Endpoints} */
 routes(router);
@@ -32,8 +30,7 @@ app.use(helmet());
 //app.use('/static',express.static(path.join(__dirname,'static')))
 
 // to use with a prefix
-// app.use('/api', router);
-app.use(router);
+app.use('/api', router);
 
 /** start server */
 app.listen(port, () => {
