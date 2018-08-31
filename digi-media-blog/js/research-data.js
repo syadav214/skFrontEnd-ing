@@ -3,7 +3,7 @@
 {
 	"blog_id": "31082018",
 	"author": "DrepMark",
-	"page_name" : "Hollywood-taking-money-away-from-India-than-chinese.html",
+	"page_name" : "loan-defaulters-in-Uttar-Pradesh-belonging-to-agriculture-sector.html",
 	"blog_date": "31 Aug 2018",
 	"blog_title" : "There are lots of loan defaulters in Uttar Pradesh belonging to agriculture sector",
 	"hashtag":"loanDefaulters"
