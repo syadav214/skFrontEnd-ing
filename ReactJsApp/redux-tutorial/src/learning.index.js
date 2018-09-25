@@ -3,12 +3,41 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-
 import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import productsReducer from './reducers/products';
-import userReducer from './reducers/user';
+/* reducer
+Type 1:
+function reducer(state, action) {
+    if(action.type==='changeState') {
+        return action.payload.newState;
+    }
+  return 'state';
+}
+
+Type 2:
+function userReducer(state = [], action) {
+  switch (action.type) {
+    case 'updateuser':
+      return action.payload.user;
+      break;
+  }
+  return state;
+}
+*/
+
+function productsReducer(state = [], action) {
+  return state;
+}
+
+function userReducer(state = [], { type, payload }) {
+  switch (type) {
+    case 'updateuser':
+      return payload.user;
+    default:
+      return state;
+  }
+}
 
 const allReducers = combineReducers({
   products: productsReducer,
@@ -41,10 +70,33 @@ const updateAction = {
 
 store.dispatch(updateAction);
 
+/* action
+Type 1:
+const action = {
+  type: 'changeState',
+  payload: {
+    newState: 'New State'
+  }
+};
+store.dispatch(action);
+
+Type 2:
+const updateAction = {
+  type: 'updateuser',
+  payload: {
+    user: 'john'
+  }
+};
+
+store.dispatch(updateAction);
+
+console.log('After dispatch=>', store.getState());
+*/
+
 // Using Provider, an App can access the store
 ReactDOM.render(
   <Provider store={store}>
-    <App aProp="WhatEver" />
+    <App />
   </Provider>,
   document.getElementById('root')
 );
