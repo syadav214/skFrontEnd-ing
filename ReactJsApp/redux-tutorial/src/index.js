@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-import { combineReducers, createStore } from 'redux';
+import thunk from 'redux-thunk';
+import { applyMiddleware, compose, combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 import productsReducer from './reducers/products';
@@ -14,6 +15,11 @@ const allReducers = combineReducers({
   products: productsReducer,
   user: userReducer
 });
+
+const allStoreEnhance = compose(
+  applyMiddleware(thunk),
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 /* we can pass single reducers function
 OR
@@ -27,7 +33,7 @@ const store = createStore(
     products: 'Iphone',
     user: 'Santos'
   },
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  allStoreEnhance
 );
 
 console.log('Initial=>', store.getState());

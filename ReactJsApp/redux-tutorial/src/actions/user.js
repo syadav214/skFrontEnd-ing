@@ -18,10 +18,25 @@ export function showError() {
   };
 }
 
+export function showSuccess() {
+  return {
+    type: SHOW_ERR,
+    payload: {
+      user: 'Success'
+    }
+  };
+}
+
 export function apiRequest() {
   return dispatch => {
-    fetch('https://google.com')
-      .then(() => console.log('Success'))
-      .catch(() => dispatch(showError()));
+    fetch('https://google2.com')
+      .then(() => {
+        console.log('Success');
+        dispatch(showSuccess());
+      })
+      .catch(() => {
+        console.log('error');
+        dispatch(showError());
+      });
   };
 }
