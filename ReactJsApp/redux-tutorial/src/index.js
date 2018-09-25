@@ -7,6 +7,9 @@ import { combineReducers, createStore } from 'redux';
 
 /* basic reducer
 function reducer(state, action) {
+    if(action.type==='changeState') {
+        return action.payload.newState;
+    }
   return 'state';
 }
 */
