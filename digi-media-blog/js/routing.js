@@ -2,7 +2,7 @@
 function getData() {
     var hrefData = window.location.href;
     let params = new URL(hrefData).searchParams;
-    var version="31082018";
+    var version="03102018";
     //var searchID = params.get('id');    
     
     var fileName = hrefData.split("/").slice(-1);
