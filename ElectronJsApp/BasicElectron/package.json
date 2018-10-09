@@ -1,0 +1,27 @@
+{
+  "name": "basicelectron",
+  "version": "1.0.0",
+  "description": "a small and basic electron app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "debug": "electron --inspect=5858 ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syadav214/skFrontEnd-ing.git"
+  },
+  "keywords": [
+    "electron",
+    "js"
+  ],
+  "author": "Santoshkumar Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syadav214/skFrontEnd-ing/issues"
+  },
+  "homepage": "https://github.com/syadav214/skFrontEnd-ing#readme",
+  "dependencies": {
+    "electron": "^3.0.3"
+  }
+}
