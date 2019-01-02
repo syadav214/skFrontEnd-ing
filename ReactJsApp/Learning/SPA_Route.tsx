@@ -14,17 +14,19 @@ class App extends React.Component {
       html = (
         <HashRouter>
           <div>
-            <ul className="header">
-              <li>
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li>
-                <NavLink to="/download">download</NavLink>
-              </li>
-              <li>
-                <NavLink to="/view">view</NavLink>
-              </li>
-            </ul>
+            <nav className="navbar navbar-default">
+              <ul className="nav navbar-nav">
+                <li>
+                  <NavLink to="/">Home</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/download">download</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/view">view</NavLink>
+                </li>
+              </ul>
+            </nav>
             <div className="content">
               <Route exact={true} path="/" component={Comp1} />
               <Route exact={true} path="/download" component={Comp2} />
