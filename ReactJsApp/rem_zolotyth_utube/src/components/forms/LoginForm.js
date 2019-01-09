@@ -24,7 +24,7 @@ class LoginForm extends React.Component {
     this.setState({ errors });
 
     if (Object.keys(errors).length === 0) {
-      this.props.submit(this.state.data);
+      this.props.submit(this.state.data).then(data=> console.log('data2',data));
     }
   };
 
@@ -64,6 +64,7 @@ class LoginForm extends React.Component {
           />
           {errors.password && <InlineError text={errors.password} />}
         </Form.Field>
+        {errors.email && <InlineError text={errors.email} />}
         <Button primary>Login</Button>
       </Form>
     );
