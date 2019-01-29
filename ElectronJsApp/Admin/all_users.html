@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <h1>Electron - Element</h1>
+    <h1>List of users</h1>
     <br />
     <div id="usersDetais"></div>
 
@@ -23,7 +23,7 @@
         .then(response => response.data)
         .then(user => {
           if (user.length > 0) {
-            let tableHtml = `<table class='table'>
+            let tableHtml = `<table class='table table-striped'>
                             <tr>
                             <td>
                                 Name
@@ -35,7 +35,7 @@
                                 Email
                             </td>
                             </tr>`;
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < user.length; i++) {
               tableHtml += `<tr>
                             <td>
                                 ${user[i].name}
