@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Electron - Element</title>
+</head>
+
+<body>
+    <h1>Electron - Element</h1>
+    <br/>
+    <input type="text" id="txt" />
+    <br/>
+    <br/>
+    <input type="button" id="btnName" onclick="getName();" value="Know your name" />
+    <input type="button" id="btnClear" onclick="clearElements();" value="Clear" />
+
+    <br/>
+    <br/>
+
+    <a href="index.html">Go to Back Page</a>
+    <script>
+        function clearElements() {
+            document.getElementById('txt').value = '';
+        }
+
+
+        function getName() {
+            let val = document.getElementById('txt').value;
+            alert('Your name is ' + val);
+        }
+
+    </script>
+</body>
+
+</html>

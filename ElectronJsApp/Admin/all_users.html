@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>List of users</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <h1>Electron - Element</h1>
+    <br />
+    <div id="usersDetais"></div>
+
+    <a href="../index.html">Go to Back Page</a>
+
+    <script>
+      const axios = require('axios');
+      axios
+        .get('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.data)
+        .then(user => {
+          if (user.length > 0) {
+            let tableHtml = `<table class='table'>
+                            <tr>
+                            <td>
+                                Name
+                            </td>
+                            <td>
+                                Username
+                            </td>
+                            <td>
+                                Email
+                            </td>
+                            </tr>`;
+            for (let i = 0; i < 5; i++) {
+              tableHtml += `<tr>
+                            <td>
+                                ${user[i].name}
+                            </td>
+                            <td>
+                                ${user[i].username}
+                            </td>
+                            <td>
+                                ${user[i].email}
+                            </td>
+                            </tr>`;
+            }
+            tableHtml += '</table>';
+            usersDetais.innerHTML = tableHtml;
+          } else {
+            usersDetais.innerHTML = 'no data found';
+          }
+        })
+        .catch(err => (usersDetais.innerHTML = err));
+    </script>
+  </body>
+</html>
