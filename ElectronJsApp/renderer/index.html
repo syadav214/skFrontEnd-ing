@@ -3,22 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <title>Electron Todo</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <div class="container">
       <div class="columns">
         <div class="column col-10">
-          <h1 class="text-center">Todos</h1>
-          <button id="createTodoBtn" type="button" class="btn btn-info">
-            Create a New Todo
-          </button>
           <br />
+          <table class="table">
+            <tr>
+              <td>Module Name (Click to use it)</td>
+            </tr>
+            <tr>
+              <td>
+                <button id="createTodoBtn" type="button" class="btn btn-info">
+                  Create a New Todo
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button id="showUserbtn" type="button" class="btn btn-info">
+                  User Details for Admin
+                </button>
+              </td>
+            </tr>
+          </table>
+
           <br />
-          <span class="text-center">Below item will be deleted on the click.</span>
-          <ul id="todoList"></ul>
+          <div id="Todo" style="display:none">
+            <br />
+            <span class="text-center"
+              >Below item will be deleted on the click.</span
+            >
+            <ul id="todoList"></ul>
+          </div>
+          <div id="usersDetais"></div>
         </div>
       </div>
     </div>

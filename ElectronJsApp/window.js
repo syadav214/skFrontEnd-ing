@@ -12,9 +12,12 @@ class Window extends BrowserWindow {
     if (maximize) {
       this.maximize();
     }
-
+    this.setIcon(__dirname + '/myApp.ico');
     this.loadFile(file);
-    this.webContents.openDevTools();
+
+    // We can run any web app inside electron using loadURL
+    this.loadURL('http://localhost:3000/');
+    // this.webContents.openDevTools();
 
     // to prevent flickering
     this.once('ready-to-show', () => {
