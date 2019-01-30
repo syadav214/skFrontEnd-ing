@@ -16,7 +16,8 @@ class Window extends BrowserWindow {
     this.loadFile(file);
 
     // We can run any web app inside electron using loadURL
-    this.loadURL('http://localhost:3000/');
+    // this.loadURL('http://localhost:3000/');
+    
     // this.webContents.openDevTools();
 
     // to prevent flickering
