@@ -5,12 +5,12 @@ sudo apt-get install openjdk-8-jdk
 
 sudo apt-get install openjdk-8-jre
 
-* Set environment variables for JAVA
+## Set environment variables for JAVA
 
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 
 
-* Download Android Studio and unzip it
+## Download Android Studio and unzip it
 
 unzip android-studio-ide-182.5199772-linux.zip 
 
@@ -19,7 +19,7 @@ cd android-studio/bin
 ./studio.sh
 
 
-* Choose a "Custom" setup when prompted to select an installation type. Make sure the boxes next to all of the following are checked:
+## Choose a "Custom" setup when prompted to select an installation type. Make sure the boxes next to all of the following are checked:
 
     Android SDK
 
@@ -28,7 +28,7 @@ cd android-studio/bin
     Android Virtual Device
 
 
-* Building a React Native app with native code, however, requires the Android 9 (Pie) SDK in particular. 
+## Building a React Native app with native code, however, requires the Android 9 (Pie) SDK in particular. 
 Additional Android SDKs can be installed through the SDK Manager in Android Studio.
 The SDK Manager can be accessed from the "Welcome to Android Studio" screen. Click on "Configure", then select "SDK Manager". 
 Select the "SDK Platforms" tab from within the SDK Manager, then check the box next to "Show Package Details" in the bottom right corner. Look for and expand the Android 9 (Pie) entry, then make sure the following items are checked:
@@ -44,7 +44,7 @@ Finally, click "Apply" to download and install the Android SDK and related build
 In AVD Manager=> Settings and changing "Emulated Performance" from "Automatic" to "Software"
 
 
-* Set environment variables for Android
+## Set environment variables for Android
 
 export ANDROID_HOME=$HOME/Android/Sdk
 
@@ -57,11 +57,11 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 
-* Create a project
+## Create a project
 
 react-native init TempProject
 
-* To run the app
+## To run the app
 
 Use 2 terminals
 
