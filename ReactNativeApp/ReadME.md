@@ -73,6 +73,8 @@ npm start
 
 react-native run-android
 
+For specific device=> react-native run-android --deviceId emulator-5554
+
 ## Second Way
 
 
@@ -83,3 +85,7 @@ expo init TempProject
 cd TempProject
 
 npm start or expo start 
+
+
+#Logging in Android (Linux)
+adb logcat | grep ReactNativeJS
