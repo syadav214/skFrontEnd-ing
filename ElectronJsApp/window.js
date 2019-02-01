@@ -13,10 +13,11 @@ class Window extends BrowserWindow {
       this.maximize();
     }
     this.setIcon(__dirname + '/myApp.ico');
+    // We can put index.html of build folder of ReactJS web app
     this.loadFile(file);
 
-    // We can run any web app inside electron using loadURL
-    // this.loadURL('http://localhost:3000/');
+    // We can run any web app inside electron using loadURL of any web application
+    // this.loadURL('http://localhost:3000/');    
     
     // this.webContents.openDevTools();
 
