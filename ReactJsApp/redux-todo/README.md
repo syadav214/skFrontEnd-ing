@@ -1,6 +1,6 @@
 # redux-todo
 
-https://redux.js.org/basics/examplehttps://redux.js.org/basics/example
+https://redux.js.org/basics/example
 
 ## Actions
 - Actions are payloads of information that send data from your application to your store. 
