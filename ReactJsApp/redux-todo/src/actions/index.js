@@ -1,19 +1,14 @@
-export const addHomePhone = number => ({
-  type: 'home',
+export const addPhone = number => ({
+  type: 'ADD_PHONE',
   number
 });
 
-export const addOfcPhone = number => ({
-  type: 'ofc',
-  number
+export const addAddress = text => ({
+  type: 'ADD_ADDRESS',
+  text
 });
 
-export const addHomeAddress = address => ({
-  type: 'home',
-  address
-});
-
-export const addOfcAddress = address => ({
-  type: 'ofc',
-  address
+export const addDOB = date => ({
+  type: 'ADD_DOB',
+  date
 });
