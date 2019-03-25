@@ -4,7 +4,7 @@ import { addDOB } from '../actions';
 
 class AddDOB extends Component {
   onDOBClick() {
-    this.props.addDOB('24-09-1989');
+    this.props.addDOB('01-01-1900');
   }
 
   render() {
