@@ -1,6 +1,6 @@
 # skFrontEnd-ing
 
-Doing stuff with ReactJs, VueJs, ElectronJs, ReactNative, HTML and CSS
+Doing stuff with ReactJs, VueJs, ElectronJs, ReactNative, HTML & CSS
 
 ### Node.js quick file server (static files over HTTP)
 
