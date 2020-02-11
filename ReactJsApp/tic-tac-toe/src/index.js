@@ -26,7 +26,7 @@ class Square extends React.Component {
         className='square'
         style={{ width: '40px', height: '40px' }}
       >
-        {this.state.currSign}
+        {this.props.reset === true ? '' : this.state.currSign}
       </button>
     );
   }
@@ -35,16 +35,17 @@ class Square extends React.Component {
 class Board extends React.Component {
   constructor() {
     super();
-    this.state = { currSign: 'X' };
+    this.state = { currSign: 'X', reset: false };
   }
 
   changeSign(newSign) {
-    this.setState({ currSign: newSign });
+    this.setState({ currSign: newSign, reset: false });
   }
 
   renderSquare(i) {
     return (
       <Square
+        reset={this.state.reset}
         currSign={this.state.currSign}
         changeSign={this.changeSign.bind(this)}
       />
@@ -52,7 +53,7 @@ class Board extends React.Component {
   }
 
   reset() {
-    this.setState({ currSign: 'X' });
+    this.setState({ currSign: 'X', reset: true });
   }
 
   render() {
