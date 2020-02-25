@@ -1,0 +1,17 @@
+.syncWidget {
+    .markCompleteModal {
+      z-index: 1050;
+      position: fixed;
+      right: 15px;
+      bottom: -10px;
+  
+      .close {
+        top: 10px;
+      }
+  
+      .btn-primary {
+        width: 100%;
+      }
+    }
+  }
+  
