@@ -1,8 +1,9 @@
 {
-  "name": "exploring-hooks",
+  "name": "exploring-wasm",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@assemblyscript/loader": "^0.17.12",
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "react-scripts": "3.1.1"
@@ -11,7 +12,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "compile": "asc tsFiles/hello-world.ts -b public/wasm/hello-world.wasm"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +29,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.17.12"
   }
 }
