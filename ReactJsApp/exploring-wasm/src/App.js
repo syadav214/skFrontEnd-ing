@@ -1,12 +1,10 @@
 import React from 'react';
-import Button from './Button';
+import Page from './Page';
 
 function App() {
   return (
     <React.Fragment>
-      helllo
-      <br />
-      <Button />
+      <Page />
     </React.Fragment>
   );
 }
