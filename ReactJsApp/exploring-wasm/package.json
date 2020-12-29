@@ -11,10 +11,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm run compileTS && npm run compileCPP && react-scripts build",
+    "build": "npm run compileTS && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "compileTS": "asc tsFiles/mathUtils.ts -b public/wasm/mathUtils.wasm",
+    "compileTS": "wasmCompiler.sh",
     "compileCPP": "emcc cppFiles/mathUtils.cpp -s STANDALONE_WASM -o public/wasm/mathUtilsCpp.wasm --no-entry"
   },
   "eslintConfig": {
