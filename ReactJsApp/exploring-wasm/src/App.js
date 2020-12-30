@@ -1,10 +1,10 @@
 import React from 'react';
-import Page from './Page';
+import PageWasm from './PageWasm';
 
 function App() {
   return (
     <React.Fragment>
-      <Page />
+      <PageWasm />
     </React.Fragment>
   );
 }
