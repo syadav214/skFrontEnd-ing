@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/syadav214/skFrontEnd-ing#readme",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "electron": "^3.0.3",
     "electron-packager": "^13.0.1",
     "electron-reload": "^1.4.0",
